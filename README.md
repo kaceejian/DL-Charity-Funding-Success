@@ -101,7 +101,7 @@ The report contains the following:
   - What variable(s) are neither targets nor features, and should be removed from the input data?
     - "EIN" and "NAME" columns were removed, because they are not features. They are not useful information for what we're trying to predict in this project.
     - See screenshot of notebook below:
-      ![ScreenShot2](../Resources/images/2.png)
+      ![ScreenShot2](/Resources/images/2.png)
 
 - Compiling, Training, and Evaluating the Model
 
