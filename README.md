@@ -5,7 +5,7 @@
 The non-profit foundation Alphabet Soup wants to create an algorithm to predict whether or not applicants for funding will be successful. Applying the knowledge of machine learning and neural networks,
 a binary classifier was created using the features in the dataset. This classifier is capable of predicting wheather applicants will be successful if funded by Alphabet Soup.
 
-There are more than 34,000 organizations that have received funding from Alphabet Soup over the years, and all these information had been stored in this CSV file. Within this dataset are a number of columns that capture metadata about each organization, such as the following:
+There are more than 34,000 organizations that have received funding from Alphabet Soup over the years, and all these information had been stored in a CSV file. Within this dataset are a number of columns that capture metadata about each organization, such as the following:
 
 - **EIN** and **NAME**—Identification columns
 - **APPLICATION_TYPE**—Alphabet Soup application type
