@@ -96,12 +96,12 @@ The report contains the following:
     - Most of the rest of the columns are considered features, the variable for them is features_x.
     - After splitting into training and testing data sets, for training, the variable for it is x_train. For testing set, it is x_test.
     - See screenshot of notebook below:
-      ![ScreenShot1](Resources/Images/1.png)
+      ![ScreenShot1](/../../../1.png)
 
   - What variable(s) are neither targets nor features, and should be removed from the input data?
     - "EIN" and "NAME" columns were removed, because they are not features. They are not useful information for what we're trying to predict in this project.
     - See screenshot of notebook below:
-      ![ScreenShot2](Resources/Images/2.png)
+      ![ScreenShot2](../../../2.png)
 
 - Compiling, Training, and Evaluating the Model
 
@@ -116,11 +116,11 @@ The report contains the following:
     - nn_2 = build_and_test_model(n_hidden_neurons=4, batch_size=64, n_layers=3)
     - nn_3 = build_and_test_model(n_hidden_neurons=8, batch_size=64, n_layers=5)
     - The accuracy of nn_1 is about: 0.732 (see below screenshot)
-      ![ScreenShot3](Resources/Images/3.png)
+      ![ScreenShot3](../../3.png)
     - The accuracy of nn_2 is about: 0.726 (see below screenshot)
-      ![ScreenShot4](Resources/Images/4.png)
+      ![ScreenShot4](/Resources/Images/4.png)
     - The accuracy of nn_3 is about: 0.730 (see below screenshot)
-      ![ScreenShot5](Resources/Images/5.png)
+      ![ScreenShot5](/../../5.png)
 
   - Based on the above results, I would select nn_1 for the neural network model, since it has the highest accuracy among the three combinations/attempts.
 
