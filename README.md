@@ -36,15 +36,15 @@ Utilize Pandas and the Scikit-Learn’s `StandardScaler()`, preprocess the datas
 3. Determine the number of unique values for each column.
 4. For those columns that have more than 10 unique values, determine the number of data points for each unique value.
 5. Use the number of data points for each unique value to pick a cutoff point to bin "rare" categorical variables together in a new value, `Other`, and then confirm if the binning was successful.
-6. Use `pd.get_dummies()` to encode categorical variables
+6. Use `pd.get_dummies()` to encode categorical variables.
 
 ### Step 2: Compile, Train, and Evaluate the Model
 
-Using TensorFlow, design a neural network/deep learning model, to create a binary classification model that can predict if an Alphabet Soup–funded organization will be successful based on the features in the dataset. Consider how many inputs there are before determining the number of neurons and layers in the model. Then, compile, train, and evaluate the binary classification model to calculate the model’s loss and accuracy.
+Design a neural network/deep learning model, to create a binary classification model that can predict if an Alphabet Soup–funded organization will be successful based on the features in the dataset. Consider how many inputs there are before determining the number of neurons and layers in the model. Then, compile, train, and evaluate the binary classification model to calculate the model’s loss and accuracy.
 
 1. Continue after Step 1, create a neural network model by assigning the number of input features and nodes for each layer using Tensorflow Keras.
 2. Create the first hidden layer and choose an appropriate activation function.
-3. If necessary, add a second hidden layer with an appropriate activation function.
+3. Add a second hidden layer with an appropriate activation function, if necessary.
 4. Create an output layer with an appropriate activation function.
 5. Check the structure of the model.
 6. Compile and train the model.
@@ -54,7 +54,7 @@ Using TensorFlow, design a neural network/deep learning model, to create a binar
 
 ### Step 3: Optimize the Model
 
-Using TensorFlow, optimize the model in order to achieve a target predictive accuracy higher than 75%. If can't achieve an accuracy higher than 75%, try to make at least three attempts to do so.
+Optimize the model in order to achieve a target predictive accuracy higher than 75%. If can't achieve an accuracy higher than 75%, try to make at least three attempts to do so.
 
 Optimize the model in order to achieve a target predictive accuracy higher than 75% by using any or all of the following:
 
@@ -81,10 +81,10 @@ The report contains the following:
 
 1. **Overview** of the analysis: Explain the purpose of this analysis.
 
-- I wanted to create a binary classifier to predict whether applicants will be successful if funded by Alphabet Soup.  
-  In order to be able to predict this, the approach is to create a machine learning model that can solve the task and be able to optimize the result through tuning the parameters.
+- A binary classifier was created in order to predict whether applicants will be successful if funded by Alphabet Soup.  
+  To predict this, the approach was to create a machine learning model that can solve the task and be able to optimize the result through tuning the parameters.
 
-2. **Results**: Use bulleted lists and images to support answers, address the following questions.
+2. **Results**:
 
 - Data Preprocessing
 
@@ -99,7 +99,7 @@ The report contains the following:
       ![ScreenShot1](Resources/Images/1.png)
 
   - What variable(s) are neither targets nor features, and should be removed from the input data?
-    - "EIN" and "NAME" columns were removed, because they are not features. They are not useful information for what I'm trying to predict in this project.
+    - "EIN" and "NAME" columns were removed, because they are not features. They are not useful information for what we're trying to predict in this project.
     - See screenshot of notebook below:
       ![ScreenShot2](Resources/Images/2.png)
 
@@ -109,7 +109,9 @@ The report contains the following:
   - Was the target model performance achieved?
   - What steps were taken to try and increase model performance?
 
-    - I’ve tested 3 combinations of different number of neurons, batch size and number of layers:
+  - For the above three questions:
+    I’ve tested 3 combinations of different number of neurons, batch size and number of layers:
+
     - nn_1 = build_and_test_model(n_hidden_neurons=12, batch_size=128, n_layers=3)
     - nn_2 = build_and_test_model(n_hidden_neurons=4, batch_size=64, n_layers=3)
     - nn_3 = build_and_test_model(n_hidden_neurons=8, batch_size=64, n_layers=5)
@@ -124,12 +126,13 @@ The report contains the following:
 
   - During the 3 attempts, I tried to increase the model performance by trying out different combinations of number of neurons, batch size and number of layers. So far, from the 3 combinations, we can see that “nn_1”, which has a combo of 12 neurons, a batch size of 128, and 3 layers, gave us the best accuracy among them; but to achieve the target model performance of 0.75, I would keep testing different combinations of these parameters, and try to find a combo with optimized results.
 
-3.  **Summary**: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain then recommendation.
+3.  **Summary**:
 
-        - In summary, in order to be able to predict whether the loan applicant will be success, I’ve created a neural network classification model that so far has a 73.2% accuracy.
+    - In summary, in order to be able to predict whether the loan applicant will be success, I’ve created a neural network classification model that so far has a 73.2% accuracy.
 
-    I’ve tested different combinations of the parameters, but I haven’t been able to achieve the 75% accuracy desired. As mentioned above, we can keep testing different combinations of the parameters of number of neurons, batch size and number of layers, or we can also look deeper into what other features might also determine “Is Successful”, and keep adjusting the model to come up with optimized results.
-    Another model that could also be used for this project would be the Random Forest Classification, because it is also good with the binary classification problem. Also, the performance of Random Forest Classification could be comparable with the neural network model when it only has few hidden layers. And also, since there are fewer parameters to work with, and overall more intuitive, Random Forest Classification could be a good alternative to the deep learning model for this project.
+    - I’ve tested different combinations of the parameters, but haven’t been able to achieve the 75% accuracy desired. As mentioned above, we can keep testing different combinations of the parameters of number of neurons, batch size and number of layers, or we can also look deeper into what other features might also determine “Is Successful”, and keep adjusting the model to come up with optimized results.
+    - Another model that could also be used for this project would be the Random Forest Classification, because it is also good with the binary classification problem. Also, the performance of Random Forest Classification could be comparable with the neural network model when it only has few hidden layers.
+    - In addition, since there are fewer parameters to work with and overall more intuitive, Random Forest Classification could be a good alternative to the deep learning model for this project.
 
 ---
 
